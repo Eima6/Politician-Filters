@@ -1,0 +1,95 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    color: rgb(59, 59, 59)
+}
+
+li .nav-link{
+    font-size: 18px;
+    color: darkslateblue;
+    font-weight: bold;
+    padding: 3px 10px;
+    position: relative;
+    margin:0px 2px;
+}
+li .nav-link:hover{
+    background-color: darkslateblue;
+    color: snow;
+}
+h2, h3{
+    color: darkslateblue;
+    text-align: center;
+    font-weight: bolder;
+}
+section article:first-child{
+    border-bottom: 2.5px solid darkslateblue;
+    
+}
+article{  
+    margin: 0px 0px 50px 0px;  
+  
+}
+#logo_container{ 
+    margin:0px 0px 0px 50px;
+    width:150px;
+    display: flex;
+    align-items: center;
+}
+
+#logo{
+    margin:0px;
+    width:100%;
+}
+#logo_container a{
+    padding:0;
+}
+#logo img{
+    width:100%;;
+}
+header{
+    border-bottom: 5px solid darkslateblue;
+    margin:0px 0px 50px 0px;
+    
+}
+nav{
+}
+
+input{
+    /* display: none; */
+   
+}
+label{
+    font-weight: bold;
+    padding: 3px 9px;
+}
+label:hover{
+    cursor: pointer;
+    color: snow;
+    background-color: darkslateblue;
+}
+
+.dropdown-item:hover{
+    background-color: darkslateblue;
+
+}
+.dropdown-menu{
+    border:none;
+    background-color: rgba(0, 0, 0, 0);
+    color:none;
+    left:75px;
+    right: 0;
+    
+}
+
+.nav .nav-item:nth-child(2) .dropdown-menu{
+    text-align: left; 
+}
+.nav .nav-item:nth-child(3) .dropdown-menu{
+    text-align: center; 
+}
+.nav .nav-item:nth-child(4) .dropdown-menu{
+    text-align: right; 
+}
+

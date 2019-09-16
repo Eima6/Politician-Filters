@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/style.css">
+  <script src="senate.js"></script>
+  <script src="house.js"></script>
+</head>
+    
+    <body>
+            <header class="container-fluid row justify-content-between">
+                    <div id="logo_container">
+                        <a href="home-starter-page.html">
+                          <figure id="logo"><img src="/imagenes/ProPublica_Logo_Banner.png" alt=""></figure>
+                        </a>
+                    </div>
+                    <nav class="navbar">
+              
+                        <ul class="nav">
+                          <li class="nav-item">
+                            <a class="nav-link"href="home-starter-page.html">Home</a>
+                          </li>
+                          <li class=" nav-item " >
+                            <a  class="nav-link dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" >Congress 113</a>
+                            <ul class="dropdown-menu">
+                              <li class="nav-item dropdown-item"><a  class="nav-link " href="senate-starter-page.html">Senate</a></li>
+                              <li class="nav-item dropdown-item"><a  class="nav-link " href="house-starter-page.html">House</a></li>
+                            </ul>
+                          </li>
+                          <li class=" nav-item ">
+                              <a class="nav-link dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-haspopup="true" aria-expanded="false"href="#">Attendance</a>
+                              <ul class="dropdown-menu">
+                                  <li class="nav-item dropdown-item"><a  class="nav-link " href="/senate-attendance-starter-page.html">Senate</a></li>
+                                  <li class="nav-item dropdown-item"><a  class="nav-link " href="/house-attendance-starter-page.html">House</a></li>
+                              </ul>
+                          </li>
+                          <!-- <li class=" nav-item " >
+                              <a  class="nav-link dropdown-toggle"  data-toggle="dropdown" href="#">Attendance</a></li>
+                              <ul class="dropdown-menu">
+                                  <li class="nav-item dropdown-item"><a class="nav-link " href="#">Senate</a></li>
+                                  <li class="nav-item dropdown-item"><a class="nav-link " href="#">House</a></li>
+                              </ul>
+                          </li>   -->
+                          <li class=" nav-item ">
+                              <a class="nav-link dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Party Loyalty</a>
+                              <ul class="dropdown-menu">
+                                  <li class="nav-item dropdown-item"><a  class="nav-link " href="/senate-party-loyalty-starter-page.html">Senate</a></li>
+                                  <li class="nav-item dropdown-item"><a  class="nav-link " href="/house-party-loyalty-starter-page.html">House</a></li>
+                              </ul>
+                          </li>
+                        </ul>
+                    </nav>          
+            </header>  
+            <!--Table container-->
+         <section class="container">
+                <h2>Congressmen</h2>
+                <p>The major power of the House is to pass federal legislation that affects the entire country, although its bills must also be passed by the Senate and further agreed to by the U.S. President before becoming law (unless both the House and Senate re-pass the legislation with a two-thirds majority in each chamber). The House has some exclusive powers: the power to initiate revenue bills, to impeach officials (impeached officials are subsequently tried in the Senate), and to elect the U.S. President in case there is no majority in the Electoral College.</p>
+                <p>Each U.S. state is represented in the House in proportion to its population as measured in the census, but every state is entitled to at least one representative. </p>
+        </section>
+        <section class="container col-6 row">
+            <div>
+                <input type="checkbox" name="D" id="D" value="D" autocomplete="off" onclick="getOptionStates()">
+                <label for="D">Democrats</label>
+            </div>
+            <div>
+                <input type="checkbox" name="R" id="R" value="R" autocomplete="off" onclick="getOptionStates()">
+                <label for="R">Republicans</label>
+            </div>
+            <div>
+                <input type="checkbox" name="I" id="I" value="I" autocomplete="off" onclick="getOptionStates()" >
+                <label for="I">Independents</label>
+            </div>
+            <select name="SelectorOfstates" onchange="getOptionStates()" id="ContainerStates">
+                    <option value="ALL" onchange="getOptionStates()" id="ALL">ALL</option>
+            </select>
+        </section>
+            <section class=" table-responsive container col-10">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Members</th>
+                            <th>First name</th>
+                            <th>Middle name</th>
+                            <th>Last name</th>
+                            <th>Party</th>
+                            <th>Total votes</th>
+                            <th>State</th>
+                        </tr>
+                    <tbody id="containerHouse">
+
+                    
+                    
+                </table>
+         
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="funciones_House.js"></script>
+    </body>
+</html>

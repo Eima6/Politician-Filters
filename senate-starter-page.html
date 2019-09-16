@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/style.css">
+  <script src="senate.js"></script>
+  <script src="house.js"></script>
+</head>
+    
+<body>
+    <header class="container-fluid row justify-content-between">
+        <div id="logo_container">
+            <a href="home-starter-page.html">
+                          <figure id="logo"><img src="/imagenes/ProPublica_Logo_Banner.png" alt=""></figure>
+            </a>  
+        </div>
+        <nav class="navbar">
+            <ul class="nav">
+                          <li class="nav-item">
+                            <a class="nav-link"href="home-starter-page.html">Home</a>
+                          </li>
+                          <li class=" nav-item " >
+                            <a  class="nav-link dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" >Congress 113</a>
+                            <ul class="dropdown-menu">
+                              <li class="nav-item dropdown-item"><a  class="nav-link " href="senate-starter-page.html">Senate</a></li>
+                              <li class="nav-item dropdown-item"><a  class="nav-link " href="house-starter-page.html">House</a></li>
+                            </ul>
+                          </li>
+                          <li class=" nav-item ">
+                              <a class="nav-link dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-haspopup="true" aria-expanded="false"href="#">Attendance</a>
+                              <ul class="dropdown-menu">
+                                  <li class="nav-item dropdown-item"><a  class="nav-link " href="/senate-attendance-starter-page.html">Senate</a></li>
+                                  <li class="nav-item dropdown-item"><a  class="nav-link " href="/house-attendance-starter-page.html">House</a></li>
+                              </ul>
+                          </li>
+                          <!-- <li class=" nav-item " >
+                              <a  class="nav-link dropdown-toggle"  data-toggle="dropdown" href="#">Attendance</a></li>
+                              <ul class="dropdown-menu">
+                                  <li class="nav-item dropdown-item"><a class="nav-link " href="#">Senate</a></li>
+                                  <li class="nav-item dropdown-item"><a class="nav-link " href="#">House</a></li>
+                              </ul>
+                          </li>   -->
+                          <li class=" nav-item ">
+                              <a class="nav-link dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Party Loyalty</a>
+                              <ul class="dropdown-menu">
+                                  <li class="nav-item dropdown-item"><a  class="nav-link " href="/senate-party-loyalty-starter-page.html">Senate</a></li>
+                                  <li class="nav-item dropdown-item"><a  class="nav-link " href="/house-party-loyalty-starter-page.html">House</a></li>
+                              </ul>
+                          </li>
+            </ul>
+        </nav>          
+    </header>
+        <!--Table container-->
+        
+    <secction class="contaier">
+            <h2>Senators</h2>
+            <p>First convened in 1789, the composition and powers of the Senate are established in Article One
+               of the U.S. Constitution. Each state is represented by two senators, regardless of population, 
+              who serve staggered six-year terms. The Senate has several exclusive powers not granted to the
+              House, including consenting to treaties as a precondition to their ratification and consenting
+              to or confirming appointments of Cabinet secretaries, federal judges, other federal executive
+              officials, military officers, regulatory officials, ambassadors, and other federal uniformed
+              officers, as well as trial of federal officials impeached by the House.</p>
+    </secction>          
+    <section class="container col-6 row">
+                <div>
+                    <input type="checkbox" name="D" id="D" value="D" autocomplete="off" onclick="getOptionStates()">
+                    <label for="D">Democrats</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="R" id="R" value="R" autocomplete="off" onclick="getOptionStates()">
+                    <label for="R">Republicans</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="I" id="I" value="I" autocomplete="off" onclick="getOptionStates()" >
+                    <label for="I">Independents</label>
+                </div>
+                <select name="SelectorOfstates" onchange="getOptionStates()" id="ContainerStates">
+                        <option value="ALL" onchange="getOptionStates()" id="ALL">ALL</option>
+                </select>
+    </section>
+            <div class="table-responsive container-fluid col-10"> 
+            <table class="table table-hover">
+                  <thead id="containerSenate">
+                      <tr>
+                          <th>Members</th>
+                          <th>First name</th>
+                          <th>Middle name</th>
+                          <th>Last name</th>
+                          <th>Party</th>
+                          <th>Total votes</th>
+                    
+     
+                </tbody>
+            </div>   
+            </table>
+           
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="funciones_House.js"></script>  
+        <!-- <script src="/js.js"></script> -->
+        <script src="funciones_Senate.js"></script>
+</body>
+</html>
